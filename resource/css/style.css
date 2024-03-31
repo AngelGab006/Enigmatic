@@ -1,0 +1,127 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*header*/
+header{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-btn img{
+    width: 100%;
+    height: 100%;
+}
+.header-btn{
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(120deg, black 30%, white 60%, white 100%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    transition: background-position .3s;
+}
+.header-btn:hover{
+    background-position: 50% 0;
+} 
+.header-btn:active{
+    background-position: 0 0;
+}
+/*central-image*/
+.central-image{
+    background: linear-gradient(312deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 60%);
+    background-size: 1000% 1000%;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: backgroundAnimation 20s ease infinite;
+    -moz-animation: backgroundAnimation 20s ease infinite;
+    -o-animation: backgroundAnimation 20s ease infinite;
+    animation: backgroundAnimation 20s ease infinite;
+}
+
+@-webkit-keyframes backgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes backgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes backgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes backgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+/*thanks to Ian Forrest for CSS GRADIENT ANIMATOR link:https://www.gradient-animator.com/*/
+.central-image img{
+    width: 600px;
+}
+.information{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 30px;
+}
+.information article{
+    margin: 20px;
+}
+
+.Select{
+    text-align: center;
+    margin: 30px;
+}
+.btnSelect{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(2, 1fr);
+}
+.election{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+.Select button{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    outline: none;
+    width: fit-content;
+    transition: .3s all;
+    box-shadow: 13px 15px 20px -11px rgba(0,0,0,0.75)
+}
+.Select button:hover{
+    box-shadow: 10px 13px 15px -9px rgba(0,0,0,1)
+}
+.Select button:active{
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+ color: rgba(0, 0, 0, 0.65);
+}
+.Select h3{
+    font-size: x-large;
+}
+
+footer{
+    margin-top: 200px;
+}

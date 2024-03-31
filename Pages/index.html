@@ -4,17 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigmatic</title>
+    <link rel="stylesheet" href="../resource/css/style.css">
+    <link rel="shortcut icon" href="../resource/img/logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>Welcome to Enigmatic</h1>
-        <hr>
+        <button class="header-btn" onclick="window.location.href='https://github.com/AngelGab006/Enigmatic'"><img src="../resource/img/Github-logo.png" alt="github-logo"></button>
     </header>
-    <h3>Select an option</h3>
-    <Button id="option1" class="btnOption">Translate Message to Number</Button>
-    <Button id="option2" class="btnOption">encrypt</Button>
+    <section class="central-image">
+        <img src="../resource/img/logo.png" alt="logo-enigma">
+    </section>
+    <Section class="information">
+        <article id="Description">
+            <h2>What it's this tool</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
+        </article>
+        <article id="Objetive">
+            <h2>Objective</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
+        </article>
+        <article id="Licese-and-ethics">
+            <h2>Ethics</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
+        </article>
+    </Section>
+    <section class="Select">
+        <h3>Select an option</h3>
+        <div class="btnSelect">
+            <div class="election" id="election-1">
+                <Button id="option1" class="btnOption" onclick="window.location.href='./Translate.html'">Translate Message to Number</Button>
+                <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi debitis qui, sequi inventore iusto autem suscipit esse vitae quas quia doloremque reiciendis nobis voluptate. Temporibus minus impedit expedita, sint error cum nihil neque dolorum consequuntur! Amet omnis quas non.</span>
+            </div>
+            <div class="election" id="election-2">
+                <Button id="option2" class="btnOption" onclick="window.location.href='./ComingSoon.html'">encrypt</Button>
+                <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, optio maxime corrupti, blanditiis odio, nisi dignissimos excepturi incidunt aut omnis quaerat possimus. At eveniet dolorum quibusdam deserunt, inventore repellendus dolorem. Qui facere sapiente nostrum voluptatibus, doloribus est, fugiat debitis tenetur quaerat quasi cum doloremque suscipit reiciendis exercitationem corporis? Vel, praesentium?</span>
+            </div>
+        </div>
+    </section>
     <footer>
         <h5>Thanks for support and use this open source project, please help use in the development with an issue</h5>
     </footer>
+    <script src="../resource/js/main.js"></script>
 </body>
 </html>

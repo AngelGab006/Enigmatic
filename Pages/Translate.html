@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="shortcut icon" href="../resource/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../resource/css/Translate.css">
+</head>
+<body>
+    <form id="form1">
+        <h1>Translator</h1>
+        <h3>Insert you'r text</h3>
+        <textarea name="text-to-translate" id="#text" cols="50" rows="10" placeholder="Insert you'r text to translate:"></textarea>
+        <h4>Translate to:</h4>
+            <input type="radio" name="Type" value="1" checked>ASCII code
+            <input type="radio" name="Type" value="2">Custom (Not available)
+            <input type="radio" name="Type" value="3">Random
+        <h4>Order of the matrix:</h4>
+            <input type="number" name="order" id="order-of-matrix" value="3" min="3">
+            <button type="submit">Submit</button>
+    </form>
+    <div class="output">
+
+    </div>
+    <script src="../resource/js/Translate.js"></script>
+</body>
+</html>
