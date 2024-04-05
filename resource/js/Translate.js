@@ -25,10 +25,9 @@ function outputMatrix(output) {
     `
 };
 function matrixForm(arr, order) {
-    let iterations = arr.length / order;
     divOutput.innerHTML += '<table><caption>Matrix Form</caption><tbody id="matrixForm"></tbody></table>'
     let Table = document.getElementById('matrixForm')
-    for (let i = 0; i < iterations; i++) {
+    for (let i = 0; i < arr.length; i++) {
         Table.innerHTML += '<tr></tr>'
         let tr = Table.lastChild
             for (let ind = 0; ind < order; ind++) {
