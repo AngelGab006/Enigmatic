@@ -35,8 +35,31 @@ function matrixForm(arr, order) {
 const OutputMessage = (string) => divOutput.innerHTML=`
 <h3>Output Message</h3>
 <p>${string}</p>`;
-function Table(params) {
-    
+function Table(arrMatrix) {
+    let table = [];
+    for (let i = 0; i < arrMatrix.length; i++) {
+        arrMatrix[i].forEach(e => {
+            let out = [];
+            out.push(String.fromCharCode(e), e);
+            if(table.find(el => el[1]=== e) === undefined){
+                table.push(out)
+            }
+        });        
+    }
+    divOutput.innerHTML += `<h3>Values in linear form</h3>
+                            <p>${JSON.stringify(table)}</p>`
+    divOutput.innerHTML += '<table class="tableCode"><caption><h3>Table of values</h3></caption><tbody id="valuesTable"></tbody></table>'
+    let Tablet = document.getElementById('valuesTable');
+    Tablet.innerHTML += '<tr><th scope="row">Character</th></tr>'
+    for (let i = 0; i < table.length; i++) {
+        let tr = Tablet.lastChild
+        tr.innerHTML += `<td>${table[i][0]}</td>`
+    }
+    Tablet.innerHTML += '<tr><th scope="row">Code</th></tr>'
+    for (let i = 0; i < table.length; i++) {
+        let tr = Tablet.lastChild
+        tr.innerHTML += `<td>${table[i][1]}</td>`
+    }
 }
 form.addEventListener('submit', e=> {
     e.preventDefault();
@@ -46,11 +69,11 @@ form.addEventListener('submit', e=> {
     const order = Number(form.elements['order'].value);
     if (type.value === '1') {
         let transformArrText;
+        let matrix;
         if(IsAPossibleProduct(arrA, arrB)){
             //get matrix 
-            let matrix = Matrix(arrA,arrB);
+            matrix = Matrix(arrA,arrB);
             //transform to string
-            matrixForm(matrix, order);
             transformArrText = matrix.map(e=>{
                 let output = '';
                 e.forEach(char => {
@@ -62,5 +85,7 @@ form.addEventListener('submit', e=> {
             transformArrText = [['is'],[' '],['not'],[' '],['a'],[' '],['possible'],[' '],['product']]
         }
         OutputMessage(transformArrText.join(''));
+        matrixForm(matrix, order);
+        Table(matrix)
     }
 })
