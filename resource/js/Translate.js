@@ -50,4 +50,4 @@ form.addEventListener('submit', e=> {
         matrixForm(output,order)
     }
     e.preventDefault();
-})
+});

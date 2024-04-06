@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>decrypt</title>
+    <title>Decrypt</title>
     <link rel="shortcut icon" href="../resource/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../resource/css/decrypt.css">
 </head>
 <body>
     <form id="form1">
-        <h1>decrypt</h1>
+        <h1>Decrypt</h1>
         <h3>Insert you'r encrypted message</h3>
-            <input type="text" placeholder="insert in linear form with [[]]">
+            <input name="arrA" type="text" placeholder="insert Matrix this form: [[],[]]">
         <h3>Insert you'r key Matrix</h3>
-            <input type="text" placeholder="insert in linear form with [[]]">
+            <input name="arrB" type="text" placeholder="insert Matrix this form: [[],[]]">
+        <h4>Type of translate:</h4>
+            <input type="radio" name="Type" value="1" checked>ASCII code
+            <input type="radio" name="Type" value="2">Custom (Not available)
+            <input type="radio" name="Type" value="3">Random
         <h4>Order of the matrix:</h4>
             <input type="number" name="order" id="order-of-matrix" value="3" min="3">
         <button type="submit">Submit</button>
