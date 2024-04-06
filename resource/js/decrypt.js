@@ -18,11 +18,23 @@ function Matrix(A,B){
     })
     return output
   }
-  
-const IsAPossibleProduct = (A,B) => {
-    return(A[A.length-1].length === B.length)
-}
-const Output = (string) => divOutput.innerHTML=`<p>${string}</p>`;
+
+const IsAPossibleProduct = (A,B) => (A[A.length-1].length === B.length);
+
+function matrixForm(arr, order) {
+    divOutput.innerHTML += '<table><caption>Matrix Form</caption><tbody id="matrixForm"></tbody></table>'
+    let Table = document.getElementById('matrixForm')
+    for (let i = 0; i < arr.length; i++) {
+        Table.innerHTML += '<tr></tr>'
+        let tr = Table.lastChild
+            for (let ind = 0; ind < order; ind++) {
+                tr.innerHTML += `<td>${arr[i][ind]}</td>`
+            }
+    }
+};
+const OutputMessage = (string) => divOutput.innerHTML=`
+<h3>Output Message</h3>
+<p>${string}</p>`;
 function Table(params) {
     
 }
@@ -38,6 +50,7 @@ form.addEventListener('submit', e=> {
             //get matrix 
             let matrix = Matrix(arrA,arrB);
             //transform to string
+            matrixForm(matrix, order);
             transformArrText = matrix.map(e=>{
                 let output = '';
                 e.forEach(char => {
@@ -48,6 +61,6 @@ form.addEventListener('submit', e=> {
         }else{
             transformArrText = [['is'],[' '],['not'],[' '],['a'],[' '],['possible'],[' '],['product']]
         }
-        Output(transformArrText.join(''));
+        OutputMessage(transformArrText.join(''));
     }
 })
