@@ -23,6 +23,33 @@ function outputMatrix(output) {
     <h3>translation</h3>
     <p>in ascii code: <a href='https://theasciicode.com.ar/'>theasciicode</a></p>
     `
+    Table(output)
+};
+function Table(arrMatrix) {
+    let table = [];
+    for (let i = 0; i < arrMatrix.length; i++) {
+        arrMatrix[i].forEach(e => {
+            let out = [];
+            out.push(String.fromCharCode(e), e);
+            if(table.find(el => el[1]=== e) === undefined){
+                table.push(out)
+            }
+        });        
+    }
+    divOutput.innerHTML += `<h3>Values in linear form</h3>
+                            <p>${JSON.stringify(table)}</p>`
+    divOutput.innerHTML += '<table class="tableCode"><caption><h3>Table of values</h3></caption><tbody id="valuesTable"></tbody></table>'
+    let Tablet = document.getElementById('valuesTable');
+    Tablet.innerHTML += '<tr><th scope="row">Character</th></tr>'
+    for (let i = 0; i < table.length; i++) {
+        let tr = Tablet.lastChild
+        tr.innerHTML += `<td>${table[i][0]}</td>`
+    }
+    Tablet.innerHTML += '<tr><th scope="row">Code</th></tr>'
+    for (let i = 0; i < table.length; i++) {
+        let tr = Tablet.lastChild
+        tr.innerHTML += `<td>${table[i][1]}</td>`
+    }
 };
 function matrixForm(arr, order) {
     divOutput.innerHTML += '<table><caption>Matrix Form</caption><tbody id="matrixForm"></tbody></table>'
@@ -49,5 +76,23 @@ form.addEventListener('submit', e=> {
         outputMatrix(output);
         matrixForm(output,order)
     }
+    if(type.value === '2') {
+        //create table
+        let outputArr = [];
+        divOutput.innerHTML = '';
+        let arrNoRepeat = textArr.filter((item,index)=>{
+            return textArr.indexOf(item) === index;
+        })
+        arrNoRepeat.forEach(e => {
+            if (e === ' ') {
+                divOutput.innerHTML += `<label for="${e}">space</label><input type="number" class="numberInput" name="${e}">`
+            }else{
+                divOutput.innerHTML += `<label for="${e}">${e}</label><input type="number" class="numberInput" name="${e}">`
+            }
+        });
+    }
     e.preventDefault();
 });
+document.getElementById('createTable1').addEventListener('click', e=>{
+
+})
