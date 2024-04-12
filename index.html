@@ -1,50 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enigmatic</title>
-    <link rel="stylesheet" href="./resource/css/style.css">
-    <link rel="shortcut icon" href="./resource/img/logo.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enigmatic</title>
+  <link rel="stylesheet" href="./resource/css/style.css" />
+  <link rel="shortcut icon" href="./resource/img/logo.png" type="image/x-icon" />
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Enigmatic</h1>
-        <button class="header-btn" onclick="window.location.href='https://github.com/AngelGab006/Enigmatic'"><img src="./resource/img/Github-logo.png" alt="github-logo"></button>
-    </header>
-    <section class="central-image">
-        <img src="./resource/img/logo.png" alt="logo-enigma">
-    </section>
-    <Section class="information">
-        <article id="Description">
-            <h2>What it's this tool</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
-        </article>
-        <article id="Objetive">
-            <h2>Objective</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
-        </article>
-        <article id="Licese-and-ethics">
-            <h2>Ethics</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis nulla cumque quae consequuntur, optio dignissimos delectus et beatae quam modi similique perspiciatis unde asperiores non laudantium, nisi quod animi commodi sunt! Ratione officia esse sit sapiente maxime hic illo veritatis incidunt sunt facilis laborum, eaque voluptas laudantium accusamus eum!</p>
-        </article>
-    </Section>
-    <section class="Select">
-        <h3>Select an option</h3>
-        <div class="btnSelect">
-            <div class="election" id="election-1">
-                <Button id="option1" class="btnOption" onclick="window.location.href='./Pages/Translate.html'">Translate Message to Number</Button>
-                <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi debitis qui, sequi inventore iusto autem suscipit esse vitae quas quia doloremque reiciendis nobis voluptate. Temporibus minus impedit expedita, sint error cum nihil neque dolorum consequuntur! Amet omnis quas non.</span>
-            </div>
-            <div class="election" id="election-2">
-                <Button id="option2" class="btnOption" onclick="window.location.href='./Pages/decrypt.html'">decrypt</Button>
-                <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, optio maxime corrupti, blanditiis odio, nisi dignissimos excepturi incidunt aut omnis quaerat possimus. At eveniet dolorum quibusdam deserunt, inventore repellendus dolorem. Qui facere sapiente nostrum voluptatibus, doloribus est, fugiat debitis tenetur quaerat quasi cum doloremque suscipit reiciendis exercitationem corporis? Vel, praesentium?</span>
-            </div>
+  <!--home section start-->
+  <!-- menu -->
+  <div class="menu_header">
+    <div class="logo">
+      <ion-icon name="eye-outline"></ion-icon>
+      <p>Enigmatic</p>
+    </div>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#cola">Colaborator</a>
+      <a href="#info">About</a>
+      <a href="https://github.com/AngelGab006/Enigmatic"> <ion-icon name="logo-github"></ion-icon></a>
+    </div>
+  </div>
+  <!-- menu end-->
+  <section class="central-image" id="home">
+    <div class="central_section">
+      <div class="text">
+        <p>Welcome to</p>
+        <p class="title">ENICMATIC</p>
+        <span>Utiliza nuestra herramienta de criptografía de vanguardia diseñada
+          para garantizar tu máxima seguridad y haz que tus mensajes sigan
+          siendo un enigma.</span>
+        <div class="buttons">
+          <a href="#tools">View Tools</a>
+          <a href="#info">Learn More</a>
         </div>
-    </section>
-    <footer>
-        <h5>Thanks for support and use this open source project, please help use in the development with an issue</h5>
-    </footer>
-    <script src="./resource/js/main.js"></script>
+      </div>
+      <div class="img">
+        <img src="resource/img/logo.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+  <!-- home section end-->
+  <!-- creators section start-->
+  <div class="creators" id="cola">
+    <div class="title">
+      <p>Colaborators</p>
+    </div>
+    <div class="colaborators">
+      <div class="people">
+        <div class="people_img">
+          <img src="resource/img/logo.jpg" alt="">
+        </div>
+        <div class="name">
+         <p>Angel Gabriel Núñez</p>
+        </div>
+      </div>
+
+
+  
+      <div class="people">
+        <div class="people_img">
+          <img src="resource/img/logo.jpg" alt="">
+        </div>
+        <div class="name">
+          Josias Peguero
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- creator section end-->
+  <section class="information" id="info" style="padding-top: 80px;">
+    <article id="Description">
+      <h2>What it's this tool</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+        perferendis nulla cumque quae consequuntur, optio dignissimos delectus
+        et beatae quam modi similique perspiciatis unde asperiores non
+        laudantium, nisi quod animi commodi sunt! Ratione officia esse sit
+        sapiente maxime hic illo veritatis incidunt sunt facilis laborum,
+        eaque voluptas laudantium accusamus eum!
+      </p>
+    </article>
+    <article id="Objetive">
+      <h2>Objective</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+        perferendis nulla cumque quae consequuntur, optio dignissimos delectus
+        et beatae quam modi similique perspiciatis unde asperiores non
+        laudantium, nisi quod animi commodi sunt! Ratione officia esse sit
+        sapiente maxime hic illo veritatis incidunt sunt facilis laborum,
+        eaque voluptas laudantium accusamus eum!
+      </p>
+    </article>
+    <article id="Licese-and-ethics">
+      <h2>Ethics</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+        perferendis nulla cumque quae consequuntur, optio dignissimos delectus
+        et beatae quam modi similique perspiciatis unde asperiores non
+        laudantium, nisi quod animi commodi sunt! Ratione officia esse sit
+        sapiente maxime hic illo veritatis incidunt sunt facilis laborum,
+        eaque voluptas laudantium accusamus eum!
+      </p>
+    </article>
+  </section>
+  <section class="Select" id="tools">
+    <h3>Select an option</h3>
+    <div class="btnSelect">
+      <div class="election" id="election-1">
+        <button id="option1" class="btnOption" onclick="window.location.href='./Pages/Translate.html'">
+          Translate Message to Number
+        </button>
+        <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel animi
+          debitis qui, sequi inventore iusto autem suscipit esse vitae quas
+          quia doloremque reiciendis nobis voluptate. Temporibus minus impedit
+          expedita, sint error cum nihil neque dolorum consequuntur! Amet
+          omnis quas non.</span>
+      </div>
+      <div class="election" id="election-2">
+        <button id="option2" class="btnOption" onclick="window.location.href='./Pages/decrypt.html'">
+          decrypt
+        </button>
+        <span class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+          optio maxime corrupti, blanditiis odio, nisi dignissimos excepturi
+          incidunt aut omnis quaerat possimus. At eveniet dolorum quibusdam
+          deserunt, inventore repellendus dolorem. Qui facere sapiente nostrum
+          voluptatibus, doloribus est, fugiat debitis tenetur quaerat quasi
+          cum doloremque suscipit reiciendis exercitationem corporis? Vel,
+          praesentium?</span>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h5>
+      Thanks for support and use this open source project, please help use in
+      the development with an issue
+    </h5>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./resource/js/main.js"></script>
 </body>
+
 </html>

@@ -1,127 +1,410 @@
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary: #1f1e45;
+  --secundary: #1341a5;
 }
+html{
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: rgb(26, 26, 68);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(6, 6, 184);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+  height: 30px;
+}
+
 /*header*/
-header{
-    display: flex;
-    height: 60px;
-    width: 100%;
-    font-size: 10px;
-    justify-content: space-around;
-    align-items: center;
+header {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  font-size: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
-.header-btn img{
-    width: 100%;
-    height: 100%;
+
+.header-btn img {
+  width: 100%;
+  height: 100%;
 }
-.header-btn{
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 7px;
-    margin: 0;
-    height: 35px;
-    cursor: pointer;
-    color: white;
-    background: linear-gradient(120deg, black 30%, white 60%, white 100%);
-    background-size: 300% 100%;
-    background-position: 100% 0;
-    transition: background-position .3s;
+
+.header-btn {
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 0;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(120deg, black 30%, white 60%, white 100%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.3s;
 }
-.header-btn:hover{
-    background-position: 50% 0;
-} 
-.header-btn:active{
-    background-position: 0 0;
+
+.header-btn:hover {
+  background-position: 50% 0;
 }
+
+.header-btn:active {
+  background-position: 0 0;
+}
+
 /*central-image*/
-.central-image{
-    background: linear-gradient(312deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 60%);
-    background-size: 1000% 1000%;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-animation: backgroundAnimation 20s ease infinite;
-    -moz-animation: backgroundAnimation 20s ease infinite;
-    -o-animation: backgroundAnimation 20s ease infinite;
-    animation: backgroundAnimation 20s ease infinite;
+.central-image {
+  background-size: 1000% 1000%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: backgroundAnimation 20s ease infinite;
+  -moz-animation: backgroundAnimation 20s ease infinite;
+  -o-animation: backgroundAnimation 20s ease infinite;
+  animation: backgroundAnimation 20s ease infinite;
+}
+
+.central-image .central_section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+}
+
+.central-image .central_section .text {
+  width: 40%;
+  padding: 15% 0 0 5%;
+}
+
+.central-image .central_section .text p {
+  font-size: 35px;
+  font-weight: 600;
+  color: #f1f1f1;
+  margin: 10px 0;
+}
+
+.central-image .central_section .text .title {
+  color: #cf0f95;
+  font-weight: 800;
+  font-size: 55px;
+  letter-spacing: 0.8px;
+  margin: 0 0 10px 0;
+  animation: fall 2s initial;
+}
+
+.central-image .central_section .text span {
+  font-size: 14px;
+  color: #d8d1d1;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.central-image .central_section .text .buttons {
+  margin-top: 25px;
+}
+
+.central-image .central_section .text .buttons a {
+  color: #f1f1f1;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10%;
+  background: #dd099d;
+}
+
+.central-image .central_section .text .buttons a:first-child {
+  margin-left: 0;
+  background: transparent;
+  border: 1px solid var(--secundary);
+  box-shadow: 0px 7px 35px -6px rgba(15, 139, 197, 0.7);
+  -webkit-box-shadow: 0px 7px 35px -6px rgba(32, 107, 177, 0.75);
+  -moz-box-shadow: 0px 7px 35px -6px rgba(8, 144, 197, 0.75);
+}
+
+.central-image .central_section .img {
+  width: 60%;
+  height: 100%;
+}
+
+.central-image .central_section .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*menu start*/
+.menu_header {
+  margin-right: 50px;
+  backdrop-filter: blur(3px);
+  padding: 0 20px;
+  width: calc(100% - 50px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.menu_header .logo {
+  height: 100%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.menu_header .logo ion-icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+.menu_header .logo p {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #4797ff;
+}
+
+/* error code */
+.menu_header .links {
+  margin-top: -12px;
+}
+
+/* error code */
+.menu_header .links a {
+  transition: .6s;
+  margin-top: -5px;
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 6px 8px;
+  margin: 0 15px;
+  border-bottom: 2.2px solid transparent;
+}
+.menu_header .links a:hover {
+  border-bottom: 2.2px solid #dd099d;
+}
+.menu_header .links a:last-child{
+  border-bottom: 2.2px solid transparent;
+}
+.menu_header .links ion-icon {
+  margin-left: 10px;
+  font-size: 25px;
+  padding: 6px;
+  background: rgb(34, 100, 242);
+  border-radius: 6px;
+  color: #fff;
+  top: 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+/*menu end*/
+/* creator start */
+.creators {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 80px 20px 100px 20px;
+}
+
+.creators .title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #1f1e45;
+}
+
+.creators .colaborators {
+  width: 90%;
+  min-height: 200px;
+  margin: 0 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.creators .people {
+  text-align: center;
+  width: 130px;
+  height: 100%;
+  padding: 10px;
+}
+
+.creators .people .people_img {
+  /* reducir los margenes */
+
+  width: 100%;
+  border-radius: 50%;
+  height: 130px;
+  background: linear-gradient(#cf0f95, var(--primary), var(--secundary), #dd099d);
+  padding: 4px;
+}
+
+.creators .people .people_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.creators .people .name {
+  font-size: 14px;
+  color: grey;
+  margin-top: 12px;
+}
+
+/* creator end */
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes backgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 51%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 @-moz-keyframes backgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 51%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 @-o-keyframes backgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 51%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 @keyframes backgroundAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 51%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 /*thanks to Ian Forrest for CSS GRADIENT ANIMATOR link:https://www.gradient-animator.com/*/
-.central-image img{
-    width: 600px;
-}
-.information{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 30px;
-}
-.information article{
-    margin: 20px;
+.central-image img {
+  width: 600px;
 }
 
-.Select{
-    text-align: center;
-    margin: 30px;
-}
-.btnSelect{
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: repeat(2, 1fr);
-}
-.election{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px;
-}
-.Select button{
-    background-color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    outline: none;
-    width: fit-content;
-    transition: .3s all;
-    box-shadow: 13px 15px 20px -11px rgba(0,0,0,0.75)
-}
-.Select button:hover{
-    box-shadow: 10px 13px 15px -9px rgba(0,0,0,1)
-}
-.Select button:active{
-    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
- color: rgba(0, 0, 0, 0.65);
-}
-.Select h3{
-    font-size: x-large;
+.information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px;
 }
 
-footer{
-    margin-top: 200px;
+.information article {
+  margin: 20px;
+}
+
+.Select {
+  text-align: center;
+  margin: 30px;
+}
+
+.btnSelect {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.election {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.Select button {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  width: fit-content;
+  transition: 0.3s all;
+  box-shadow: 13px 15px 20px -11px rgba(0, 0, 0, 0.75);
+}
+
+.Select button:hover {
+  box-shadow: 10px 13px 15px -9px rgba(0, 0, 0, 1);
+}
+
+.Select button:active {
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.Select h3 {
+  font-size: x-large;
+}
+
+footer {
+  margin-top: 200px;
 }
