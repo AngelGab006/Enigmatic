@@ -41,3 +41,9 @@ table {
   tfoot td {
     font-weight: bold;
   }
+  .numberInput{
+    display: block;
+  }
+  .output{
+    padding-top: 20px;
+  }
