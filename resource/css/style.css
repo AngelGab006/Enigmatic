@@ -223,7 +223,7 @@ header {
   width: 100%;
   text-align: center;
   height: auto;
-  padding: 80px 20px 100px 20px;
+  padding: 80px 20px 10px 20px;
 }
 
 .creators .title {
@@ -407,4 +407,7 @@ header {
 
 footer {
   margin-top: 200px;
+}
+#info{
+  padding-top: 0px !important;
 }
